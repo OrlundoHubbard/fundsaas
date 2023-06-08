@@ -25,7 +25,7 @@ function handleCreateProject(event) {
     const projectGoalInput = document.getElementById('project-goal');
 
     const newProject = {
-        name: projectNameInput.ariaValueMax,
+        name: projectNameInput.value,
         description: projectDescriptionInput.value,
         goal: parseFloat(projectGoalInput.value)
     };
@@ -33,5 +33,9 @@ function handleCreateProject(event) {
     projects.push(newProject);
 
     // Clear form inputs
-    projectNameInput.value = ''
+    projectNameInput.value = '';
+    projectDescriptionInput.value = '';
+    projectGoalInput.value = '';
+
+    renderProjects();
 }
