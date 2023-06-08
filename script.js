@@ -28,5 +28,10 @@ function handleCreateProject(event) {
         name: projectNameInput.ariaValueMax,
         description: projectDescriptionInput.value,
         goal: parseFloat(projectGoalInput.value)
-    }
+    };
+
+    projects.push(newProject);
+
+    // Clear form inputs
+    projectNameInput.value = ''
 }
